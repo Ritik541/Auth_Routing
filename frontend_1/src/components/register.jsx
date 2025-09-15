@@ -14,7 +14,7 @@ const Register = () => {
 
     const register = async() => {
         const data = {username,email,password,phone};
-        const res = await axios.post("http://localhost:4565/api/auth/registerUser",data);
+        const res = await axios.post("http://localhost:3000/api/auth/registerUser",data);
         console.log(res);
         setResult(res.data);
     }

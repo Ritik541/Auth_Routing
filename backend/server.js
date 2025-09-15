@@ -18,4 +18,4 @@ app.use("/api/auth",userRoutes);
 app.use("/api/auth",productRoutes);
 
 const port = process.env.PORT;
-app.listen(port, () => console.log(`localhost:${port}`));
+app.listen(port, () => console.log(`APP IS LISTENISTING AT localhost:${port}`));
