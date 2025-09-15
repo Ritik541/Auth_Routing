@@ -1,4 +1,4 @@
-import { pool } from "../config/db.js";
+/* import { pool } from "../config/db.js";
 
 
 export const addProduct = async (req, res) => {
@@ -394,3 +394,4 @@ export const updateProductsByIds = async (req, res) => {
     }
 }
 
+ */

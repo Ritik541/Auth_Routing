@@ -1,4 +1,4 @@
-import { pool } from "../config/db.js";
+/* import { pool } from "../config/db.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -248,4 +248,4 @@ export const logoutUser = (req,res) => {
     return res.status(200).json({
         message : "Logout successfully"
      });
-}
+} */

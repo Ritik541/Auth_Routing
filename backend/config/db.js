@@ -1,4 +1,4 @@
-import mysql from "mysql2/promise";
+/* import mysql from "mysql2/promise";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -25,3 +25,4 @@ export const checkConnection = async () => {
     console.log("❌ Connection failed:", err);
   }
 };
+ */

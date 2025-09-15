@@ -1,4 +1,4 @@
-import express from "express";
+/* import express from "express";
 import {addProduct,getAllProducts,deleteAllProducts,deleteProductById,
         getProductById,getProductsByIds,deleteProductsByIds,updateAllProducts,
         updateProductById,updateProductsByIds} from "../controller/productController.js";
@@ -20,4 +20,4 @@ router.put("/updateProductById",updateProductById);
 router.put("/updateProductsByIds",updateProductsByIds);
 
 
-export default router;
+export default router; */
