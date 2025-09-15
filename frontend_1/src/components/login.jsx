@@ -11,7 +11,7 @@ const Login = () => {
      
     const login = async () => {
         const data = {email,password};
-        const res = await axios.post("http://localhost:3000/api/auth/loginUser",data);
+        const res = await axios.post("https://auth-routing.onrender.com/api/auth/loginUser",data);
         setResult(res.data);
         console.log(res.data);
     }
