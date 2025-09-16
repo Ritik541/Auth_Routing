@@ -1,19 +1,17 @@
 import express from "express";
-/* import {saveUser,getAllUsers,saveAllUsers,deleteAllUsers,deleteUserById,loginUser,getUserProfile,logoutUser} from "../controller/userController.js";
+import {saveUser,getAllUsers,deleteUserById,loginUser,getUserProfile,logoutUser} from "../controller/userController.js";
 import {verifyAccessToken,verifyRefreshToken} from "../middleware/authMiddleware.js";
 import { registrationValidator } from "../validator/registration.Validation.js";
-import { validationErrorHandler } from "../middleware/validationError.middleware.js"; */
+import { validationErrorHandler } from "../middleware/validationError.middleware.js";
 
 const router = express.Router();
 
-/* router.post("/registerUser",registrationValidator,validationErrorHandler,saveUser);
+router.post("/registerUser",registrationValidator,validationErrorHandler,saveUser);
 router.get("/getAllUsers",getAllUsers);
-router.post("/saveAllUsers",saveAllUsers);
-router.delete("/deleteAllUsers",deleteAllUsers);
 router.delete("/deleteUserById",deleteUserById);
 router.post("/loginUser",loginUser);
 router.get("/getUserProfile",verifyAccessToken,getUserProfile);
 router.delete("/logoutUser",logoutUser);
-router.get("/refreshToken",verifyRefreshToken); */
+router.get("/refreshToken",verifyRefreshToken); 
 
 export default router;

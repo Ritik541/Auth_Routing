@@ -1,28 +1,24 @@
-/* import mysql from "mysql2/promise";
-import dotenv from "dotenv";
-dotenv.config();
+import { Pool } from "pg";
 
-const { DB_HOST, DB_DATABASE, DB_USER, DB_PASSWORD, DB_PORT } = process.env;
-console.log(DB_HOST, DB_DATABASE, DB_USER, DB_PASSWORD, DB_PORT);
+const {DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE} = process.env; 
 
-const db_info = {
-  host: DB_HOST,
-  database: DB_DATABASE,
-  user: DB_USER,
-  password: DB_PASSWORD,
-//  port: DB_PORT,
-//  ssl: { rejectUnauthorized: false } // 👈 Railway ke liye zaroori hai
-};
+export const pool = new Pool({
+  user: "DB_USER",      
+  host: "DB_HOST",         
+  database: "DB_DATABASE",   
+  password: "DB_PASSWORD",
+  connectionString: process.env.DATABASE_URL, // provided by Render
+  ssl: { rejectUnauthorized: false }          // needed for Render                
+});
 
-export const pool = mysql.createPool(db_info);
+export const checkConnection = async() => {
+     try{
+           const conn = await pool.connect();
+           console.log("Connected to database");
+           conn.release();
+     }
+     catch(err){
+         console.log("Connection failed : ",err);
+     }
+}
 
-export const checkConnection = async () => {
-  try {
-    const conn = await pool.getConnection();
-    console.log("✅ Database Connected...");
-    conn.release();
-  } catch (err) {
-    console.log("❌ Connection failed:", err);
-  }
-};
- */
